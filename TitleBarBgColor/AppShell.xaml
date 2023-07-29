@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="TitleBarBgColor.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:TitleBarBgColor"
+    Shell.FlyoutBehavior="Disabled">
+
+    <FlyoutItem Title="Page A and B tabs">
+        <ShellContent ContentTemplate="{DataTemplate local:MainPage}"
+                      Shell.TabBarIsVisible="True"
+                      Route="MainPage"
+                      Title="Page A"/>
+        <ShellContent ContentTemplate="{DataTemplate local:SecondPage}"
+                      Shell.TabBarIsVisible="True"
+                      Route="SecondPage"
+                      Title="Page B"/>
+    </FlyoutItem>
+
+    <ShellContent ContentTemplate="{DataTemplate local:ModalPage}"
+                  Shell.TabBarIsVisible="False"
+                  Route="ModalPage"
+                  Title="Page C"/>
+
+</Shell>
